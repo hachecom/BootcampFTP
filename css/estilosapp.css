@@ -19,3 +19,36 @@ section{
     background-color: white;
     height: 800px;
 }
+
+.modal-content {
+    background-color: rgba(245, 244, 244, 0.957);
+    font-family:'Montserrat', sans-serif;
+    padding: 1%;
+    border-radius: 10px;
+    width: 70%;
+ }
+
+ .modal-header {
+    background-color: rgb(214, 227, 230) ;
+    border-radius: 10px;
+
+ }
+ 
+ .modal-footer{
+    margin-right: 50px;
+ }
+
+ .card{
+    padding: 0%;
+    background-color: rgba(245, 244, 244, 0.957);
+    font-family:'Montserrat', sans-serif;
+ }
+ .card-header {
+    background-color: rgb(214, 227, 230) ;
+    border-radius: 10px;
+
+ }
+
+
+ 
+ 
