@@ -19,3 +19,16 @@ section{
     background-color: white;
     height: 800px;
 }
+
+.wrapper {
+    width:100px;
+    height:100px;
+    background:rgb(146, 17, 17);
+    margin:10px 0 0;
+}
+
+.botonCarrito{
+    position: relative;
+     left: 250px;
+     top: 50px;
+}
