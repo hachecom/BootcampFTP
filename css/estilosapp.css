@@ -22,9 +22,10 @@ section{
 }
 
 .modal-content {
-    background-image: linear-gradient(to right,  white,  rgb(215, 208, 212));
+    background-image: linear-gradient(to right,  white,  rgb(108, 106, 106));
     padding: 1%;
     border-radius: 5px;
+    border-color: black;
     width: 70%;
  }
 
@@ -61,10 +62,11 @@ section{
 }
 
 .offcanvas {
-    background-image: linear-gradient(to right,  white,  rgb(215, 208, 212));
+    background-image: linear-gradient(to right,  white,  rgb(108, 106, 106));
     padding: 1%;
     border-radius: 5px;
-    
+    border-color: black;
+       
 }
 
 .carousel {
