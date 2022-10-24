@@ -8,23 +8,179 @@
     <title>footer</title>
   </head>
   <body>
-    <nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-lg-6 col-md-2 col-sm-2 bg-dark text-white">
-            <div class="row">
-              <div class="col-12">LOGO</div>
+        <a class="navbar-brand" href="./nosotros.html">
+          <img class="logo" src="./imagenes/LOGOJAS.jpeg" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active aria-current="page" href="./indexapp.html">INICIO</a>
+            </li>
+            
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    INDUMENTARIA
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">REMERAS</a></li>
+                  <li><a class="dropdown-item" href="#">ABRIGOS</a></li>
+                  <li><a class="dropdown-item" href="#">PANTALONES</a></li>
+                </ul>
+              </li>
+              <a class="nav-link" href="./zapatillas.html">
+                ZAPATILLAS
+              </a>
+             </li>
+            </ul>
+            <ul class="navbar-nav  mb-2 mb-lg-0 ">
+              <form class="d-flex me-5">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <a class="btn " type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg></a>
+              </form>
+          
+              
+               
+           
+            <li class="nav-item justify-content-end">
+              <a class="nav-link"  type="button" data-bs-toggle="modal" data-bs-target="#UsuarioModal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                </svg></a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </svg></a>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                  <h5 id="offcanvasRightLabel">Carrito de Compras</h5>
+
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <!--OffCanvas Carrito -->
+                <div class="offcanvas-body">
+                  <div class="row ">
+
+                       <div class="d-block" >
+                        Items en tu carrito
+                      </div>
+                      
+                  <hr >
+
+                      <div class="col" >
+                        <img
+                          src="./imagenes/remera.jpg"
+                          class="img-fluid rounded-3">
+                      </div>
+                      <div class="col">
+                        <h6 class="text-muted">Remera Algodón TM</h6>
+
+                      </div>
+                  <div class="col">
+                    1
+                  </div>
+                  <div class="col">
+                        <h6 class="mb-0">$8000</h6>
+                      </div>
+                      <div class="col">
+                       <a type="button">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                        <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                        </svg> </a>
+                      </div>
+
+                      <hr>
+
+                          <div class="col" >
+                        <img
+                          src="./imagenes/zapasNike.jpg"
+                          class="img-fluid rounded-3">
+                      </div>
+                      <div class="col">
+                        <h6 class="text-muted"> Nike AirJordan T38</h6>
+
+                      </div>
+                  <div class="col">
+                    1
+                  </div>
+                  <div class="col">
+                        <h6 class="mb-0">$19.500</h6>
+                      </div>
+                      <div class="col">
+                       <a type="button">
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                        <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                        </svg> </a>
+                      </div>
+
+
+                      <hr>
+                 <div> 
+                  <a class="botonCarrito" href="./carrito.html">
+                  <button type="button" class="btn btn-sm btn-outline-dark"
+                  style="background-color: rgba(196, 208, 218, 0.986); ">Ir al Carrito</button>
+                 
+                  </a>
+                </div>
+                </div>
+            
+                </div>
+              </div>
+          </li>
+<!--USUARIO MODAL-->
+            <div class="modal fade" aria-hidden="true" id="UsuarioModal" tabindex="-1" aria-labelledby="UsuarioModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h6 class="modal-title" id="UsuarioModalLabel">Iniciar Sesión</h6>
+                    
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form action="/action_page.php">
+                      <div class="mb-3">
+                        <label for="email">E-mail:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Escribe tu email" name="email">
+                      </div>
+                      <div class="mb-3">
+                        <label for="pwd">Contraseña:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Escribe tu contraseña" name="pwd">
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" name="remember"> Recuerdame</label>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                   
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary"> Iniciar</button>
+                    <a style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; color:black; font-size: 12px;" href="./contraseña.html">  Olvidé mi contraseña</a>
+                    
+                    
+                    <div >
+                      <a style= "color:rgb(8, 8, 8); font-size: 12px;" >  ¿Aún no tienes Cuenta?  </a>
+                    
+                        <a  style= "color:rgb(34, 22, 210); font-size: 12px;" href="./crearcuenta.html">   Crear cuenta</a>
+                      </div>
+                    
+                  
+                                        
+                  </div>
+                  
+                 
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="col-12 col-lg- col-md-8 col-sm-8 bg-primary text-white">
-            <div class="row">
-              <div class="bg-white text-dark col-lg-3 col-md-3 col-sm-3">INICIO</div>
-              <div class="bg-dark text-white col-lg-3 col-md-3 col-sm-3">CALZADOS</div>
-              <div class="bg-white text-dark col-lg-3 col-md-3 col-sm-3">INDUMENTARIA</div>
-              <div class="bg-dark text-white col-lg-3 col-md-3 col-sm-3">ACCESORIOS</div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6 col-md-2 col-sm-2 bg-light text-dark">BUSCAR</div>
+          </ul>
+          
         </div>
       </div>
     </nav>
