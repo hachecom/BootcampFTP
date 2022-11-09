@@ -19,7 +19,9 @@ const register = async (req, res) => {
     password,
     role: "user",
   }).then((user) => {
-      res.status(200).json({ status: 200, msg: "Usuario creado correctamente", user });
+    
+      res.send("BIENVENIDO " + email + "YA ESTAS REGISTRADO EN JAS ROPA URBANA!");
+      //res.status(200).json({ status: 200, msg: "Usuario creado correctamente", user });
     })
     .catch((error) => {
       //Error al crear usuario
@@ -67,7 +69,8 @@ const logIn = async (req, res) => {
             .status(401)
             .json({ msg: "Algo ha fallado update!", error });
         }
-        return res.status(200).json({ user, token });
+        //return res.status(200).json({ user, token });
+        return res.send("¡HOLA " + email + "TE LOGUEASTE CORRECTAMENTE")
       } else {
         //Acceso denegado - Usuario y/o contraseña invalidos
         return res
