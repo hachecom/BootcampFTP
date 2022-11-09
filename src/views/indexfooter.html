@@ -136,49 +136,51 @@
               </div>
           </li>
 <!--USUARIO MODAL-->
-            <div class="modal fade" aria-hidden="true" id="UsuarioModal" tabindex="-1" aria-labelledby="UsuarioModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h6 class="modal-title" id="UsuarioModalLabel">Iniciar Sesión</h6>
-                    
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form action="/action_page.php">
-                      <div class="mb-3">
-                        <label for="email">E-mail:</label>
-                        <input type="email" class="form-control" id="email" placeholder="Escribe tu email" name="email">
-                      </div>
-                      <div class="mb-3">
-                        <label for="pwd">Contraseña:</label>
-                        <input type="password" class="form-control" id="pwd" placeholder="Escribe tu contraseña" name="pwd">
-                      </div>
-                      <div class="checkbox">
-                        <label><input type="checkbox" name="remember"> Recuerdame</label>
-                      </div>
-                  </div>
-                  <div class="modal-footer">
-                   
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary"> Iniciar</button>
-                    <a style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; color:black; font-size: 12px;" href="./contraseña.html">  Olvidé mi contraseña</a>
-                    
-                    
-                    <div >
-                      <a style= "color:rgb(8, 8, 8); font-size: 12px;" >  ¿Aún no tienes Cuenta?  </a>
-                    
-                        <a  style= "color:rgb(34, 22, 210); font-size: 12px;" href="./crearcuenta.html">   Crear cuenta</a>
-                      </div>
-                    
-                  
-                                        
-                  </div>
-                  
-                 
-                </div>
-              </div>
-            </div>
+<div class="modal fade" aria-hidden="true" id="UsuarioModal" tabindex="-1" aria-labelledby="UsuarioModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="UsuarioModalLabel">Iniciar Sesión</h6>
+        
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <form action="http://localhost:3000/login" method="post">
+          <div class="mb-3">
+            <label for="email">E-mail:</label>
+            <input type="email" class="form-control" id="email" placeholder="Escribe tu email" name="email">
+          </div>
+          <div class="mb-3">
+            <label for="password">Contraseña:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Escribe tu contraseña" name="password">
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" name="remember"> Recuerdame</label>
+          </div>
+
+          <div class="modal-footer">
+       
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary"> Iniciar</button>
+            <a style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; color:black; font-size: 12px;" href="./contraseña.html">  Olvidé mi contraseña</a>
+            
+            
+            <div >
+        </form>
+      </div>
+    
+     
+          <a style= "color:rgb(8, 8, 8); font-size: 12px;" >  ¿Aún no tienes Cuenta?  </a>
+        
+            <a  style= "color:rgb(34, 22, 210); font-size: 12px;" href="./crearcuenta.html">   Crear cuenta</a>
+          </div>
+        
+      
+                            
+      </div>
+      
+     
+    </div>
           </ul>
           
         </div>

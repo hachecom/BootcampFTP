@@ -146,27 +146,31 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <form action="/action_page.php">
+                <form action="http://localhost:3000/login" method="post">
                     <div class="mb-3">
                       <label for="email">E-mail:</label>
                       <input type="email" class="form-control" id="email" placeholder="Escribe tu email" name="email">
                     </div>
                     <div class="mb-3">
-                      <label for="pwd">Contraseña:</label>
-                      <input type="password" class="form-control" id="pwd" placeholder="Escribe tu contraseña" name="pwd">
+                      <label for="password">Contraseña:</label>
+                      <input type="password" class="form-control" id="pwd" placeholder="Escribe tu contraseña" name="password">
                     </div>
                     <div class="checkbox">
                       <label><input type="checkbox" name="remember"> Recuerdame</label>
                     </div>
-                </div>
-                <div class="modal-footer">
+
+                    <div class="modal-footer">
                  
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-primary"> Iniciar</button>
-                  <a style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; color:black; font-size: 12px;" href="./contraseña.html">  Olvidé mi contraseña</a>
-                  
-                  
-                  <div >
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="submit" class="btn btn-primary"> Iniciar</button>
+                      <a style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; color:black; font-size: 12px;" href="./contraseña.html">  Olvidé mi contraseña</a>
+                      
+                      
+                      <div >
+                  </form>
+                </div>
+              
+               
                     <a style= "color:rgb(8, 8, 8); font-size: 12px;" >  ¿Aún no tienes Cuenta?  </a>
                   
                       <a  style= "color:rgb(34, 22, 210); font-size: 12px;" href="./crearcuenta.html">   Crear cuenta</a>
@@ -195,37 +199,29 @@
             <div class="card-body p-5" style=" rgba(245, 244, 244, 0.957)">
               <h4 class="text-center mb-5">Crear una cuenta</h4>
 
-              <form>
+              <form action="http://localhost:3000/register" method="post"> 
 
-                <div class="form-outline mb-4">
-                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example1cg">Nombre y Apellido</label>
+                
+                <div class="mb-3">
+                  <label for="email">E-mail:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Escribe tu email" name="email">
+                </div>
+                <div class="mb-3">
+                  <label for="password">Contraseña:</label>
+                  <input type="password" class="form-control" id="password" placeholder="Escribe tu contraseña" name="password">
+                </div>
+                <div class="mb-3">
+                  <label for="password">Contraseña:</label>
+                  <input type="text" class="form-control" id="confirmPassword" placeholder="Escribe tu contraseña" name="confirmPassword">
                 </div>
 
-                <div class="form-outline mb-4">
-                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example3cg">Email</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example4cg">Contraseña</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example4cdg">Vuelve a escribir tu contraseña</label>
-                </div>
-
-                <div class="form-check d-flex justify-content-center mb-5">
-                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
-                  <label class="form-check-label" for="form2Example3g">
-                    Acepto <a href="#!" class="text-body"><u>Términos y condiciones</u></a>
-                  </label>
+                
+                    Acepto Términos y condiciones
+                  
                 </div>
 
                 <div class="d-flex justify-content-center">
-                  <button type="button"
+                  <button type="submit"
                     class="btn btn-dark">Registrarme</button>
                 </div>
 
