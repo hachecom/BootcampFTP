@@ -4,6 +4,8 @@ const bcrypt = require("bcryptjs");
 const { promisify } = require("util");
 const { isJwtExpired } = require("jwt-check-expiration");
 const { User } = require("../database/models/index");
+const path = require("path");
+
 
 //Auth
 const register = async (req, res) => {
@@ -69,8 +71,13 @@ const logIn = async (req, res) => {
             .status(401)
             .json({ msg: "Algo ha fallado update!", error });
         }
+        return res
+        //.send("<html> <head ><h1> Hola "+ email + "!</h1 > </head> <body><h2>Estás correctamente logueado en JAS Ropa Urbana.</p></h2> </body> </html>")
+        //.render( "indexapp.ejs");          
         //return res.status(200).json({ user, token });
-        return res.send("¡HOLA " + email + "TE LOGUEASTE CORRECTAMENTE")
+        
+        .render('indexapp', { title: email });
+        
       } else {
         //Acceso denegado - Usuario y/o contraseña invalidos
         return res

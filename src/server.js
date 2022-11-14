@@ -30,8 +30,27 @@ app.use('/js', express.static(__dirname + 'public/js'))
 app.use('/imgagenes', express.static(__dirname + 'public/imagenes'))
 
 // Set View's
-app.set('views', './views');
-app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'ejs')
+
+//Prueba
+//app.get('/', function(req, res){
+  
+    // Rendering our web page i.e. Demo.ejs
+    // and passing title variable through it
+//    res.render('Demo', {
+//        title: 'View Engine Demo'
+//    })
+//})
+
+app.post('/login', function(req, res){
+  
+  // Rendering our web page i.e. Demo.ejs
+  // and passing title variable through it
+  res.render('demo', {
+      title: res.send(email)
+  })
+})
 
 // Navigation
 app.get('/indexapp.html', (req, res) => {
@@ -39,7 +58,7 @@ app.get('/indexapp.html', (req, res) => {
  })
 
 app.get('/carrito.html', (req, res) => {
-    res.sendFile(__dirname + '/views/nosotros.html')
+    res.sendFile(__dirname + '/views/carrito.html')
  })
 
 app.get('/contraseña.html', (req, res) => {
