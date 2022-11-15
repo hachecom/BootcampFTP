@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilosapp.css">
-    <title>JAS Ropa Urbana</title>
+    <link rel="stylesheet" href="./css/estilosapp.css">
+    <title>ZAPATILLAS</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="./nosotros.html">
+      <a class="navbar-brand" href="./nosotros">
         <img class="logo" src="./imagenes/LOGOJAS.jpeg" alt="logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +20,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active aria-current="page" href="./indexapp.html">INICIO</a>
+            <a class="nav-link active aria-current="page" href="./indexapp">INICIO</a>
           </li>
           
             <li class="nav-item dropdown">
@@ -33,7 +33,7 @@
                 <li><a class="dropdown-item" href="#">PANTALONES</a></li>
               </ul>
             </li>
-            <a class="nav-link" href="./zapatillas.html">
+            <a class="nav-link" href="./zapatillas">
               ZAPATILLAS
             </a>
            </li>
@@ -125,7 +125,7 @@
 
                     <hr>
                <div> 
-                <a class="botonCarrito" href="./carrito.html">
+                <a class="botonCarrito" href="./carrito">
                 <button type="button" class="btn btn-sm btn-outline-dark"
                 style="background-color: rgba(196, 208, 218, 0.986); ">Ir al Carrito</button>
                
@@ -163,7 +163,7 @@
        
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
             <button type="submit" class="btn btn-primary"> Iniciar</button>
-            <a style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; color:black; font-size: 12px;" href="./contraseña.html">  Olvidé mi contraseña</a>
+            <a style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; color:black; font-size: 12px;" href="./contrasena">  Olvidé mi contraseña</a>
             
             
             <div >
@@ -173,7 +173,7 @@
      
           <a style= "color:rgb(8, 8, 8); font-size: 12px;" >  ¿Aún no tienes Cuenta?  </a>
         
-            <a  style= "color:rgb(34, 22, 210); font-size: 12px;" href="./crearcuenta.html">   Crear cuenta</a>
+            <a  style= "color:rgb(34, 22, 210); font-size: 12px;" href="./crearcuenta">   Crear cuenta</a>
           </div>
         
       
@@ -188,44 +188,116 @@
     </div>
   </nav>
 
-      <div class="row">
-        <div class="col-sm-3 "> 
-        </div>
-        <div class="col-sm-6 "> 
-          <div class="card text-center">
-        <div class="card-header">
-         <h4>He olvidado mi contraseña</h4> 
-        </div>
-        <div class="card-body">
-          <h6 class="card-title">Si has olvidado tu contraseña, proporciona tu dirección de correo y te enviaremos un email con instrucciones de cómo recuperarla!</h6>
-          <form>
-            <div class="mb-3 text-center">
-              <label style="color:gray" for="exampleInputEmail1" class="form-label">Intruduce tu email</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">Recuerda utilizar el email con el que te has registrado.</div>
-            </div>
-            
-            
-            <a href="#" class="btn btn-dark">Enviar</a>
-          </form>
-          
-        </div>
-        <div class="card-footer text-muted">
-          
-        </div>
-         </div>
-       </div>
+      <div class="img-fluid">
+          <img class="img-bg" src="./imagenes/fondoZAP.jpeg" width="100%" height="650px" alt="">
       </div>
-   
-    <!--FOOTER-->
+  
+      <!--cartas de zapatillas-->
+      <div class="row row-cols-1 row-cols-md-3 g-4 m-5 ">
+        <div class="col ">
+          <div class="card h-100 ">
+            <img src="imagenes/zapa1a.jfif" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Botas SK8-HI </h4>
+              <h5> VANS </h5>
+              <p class="card-text fw-bold">$21000</p>
+              <a href="#" class="btn btn-dark">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="imagenes/zapa2a.jfif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Botas SK8-HI </h4>
+              <h5> VANS </h5>
+              <p class="card-text fw-bold">$21000</p>
+              <a href="#" class="btn btn-dark">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="imagenes/zapa3a.jfif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Botas SK8-HI </h4>
+              <h5> VANS </h5>
+              <p class="card-text fw-bold">$21000</p>
+              <a href="#" class="btn btn-dark">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="imagenes/zapa4.jfif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Botas SK8-HI </h4>
+              <h5> VANS </h5>
+              <p class="card-text fw-bold">$21000</p>
+              <a href="#" class="btn btn-dark">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col ">
+          <div class="card h-100 ">
+            <img src="imagenes/zapa1a.jfif" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Botas SK8-HI </h4>
+              <h5> VANS </h5>
+              <p class="card-text fw-bold">$21000</p>
+              <a href="#" class="btn btn-dark">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="imagenes/zapa2a.jfif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Botas SK8-HI </h4>
+              <h5> VANS </h5>
+              <p class="card-text fw-bold">$21000</p>
+              <a href="#" class="btn btn-dark">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="imagenes/zapa3a.jfif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Botas SK8-HI </h4>
+              <h5> VANS </h5>
+              <p class="card-text fw-bold">$21000</p>
+              <a href="#" class="btn btn-dark">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="imagenes/zapa4.jfif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">Botas SK8-HI </h4>
+              <h5> VANS </h5>
+              <p class="card-text fw-bold">$21000</p>
+              <a href="#" class="btn btn-dark">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--fin de cartas-->
+
       <div class="container-fluid">
         <div class="row p-5 pb-2 bg-dark text-white">
           <div class="col-xs-12 col-md-6 col-lg-3">
-            <p class="h5">JAS Ropa Urana</p>
+            <p class="h5"><a class="text-white text-decoration-none" href="./nosotros"> JAS Ropa Urana</a></p>
             <div class="mb-2">
-              <a class="text-secondary text-decoration-none" href="#">Argentina-Rosario-Santa Fe</a>
+              <a class="text-secondary text-decoration-none" href="./indexapp">INICIO</a>
             </div>
-          </div>
+            <div class="mb-2">
+              <a class="text-secondary text-decoration-none" href="./indexapp">INDUMENTARIA</a>
+            </div>
+            <div class="mb-2">
+              <a class="text-secondary text-decoration-none" href="./zapatillas">ZAPATILLAS</a>
+            </div></div>
 
           <div class="col-xs-12 col-md-6 col-lg-3">
             <p class="h5">NAVEGACIÓN</p>
@@ -262,6 +334,7 @@
         </div> 
       </div>
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

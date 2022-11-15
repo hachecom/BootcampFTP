@@ -2,18 +2,22 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const { json } = require("body-parser");
-const path = require("path")
+const path = require("path");
+const session = require('express-session');
+const REquest = require("request");
 const app = express();
 
 //Requires to routes
 const authRoute = require("./routes/auth.routes");
 const usersRoute = require("./routes/users.routes");
+const { title } = require("process");
 
 //Middleware
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(json())
+app.use(session( {secret: 'xxx', saveUninitialized: true, resave: true} ));
 
 
 // Routes
@@ -33,48 +37,35 @@ app.use('/imgagenes', express.static(__dirname + 'public/imagenes'))
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
-//Prueba
-//app.get('/', function(req, res){
-  
-    // Rendering our web page i.e. Demo.ejs
-    // and passing title variable through it
-//    res.render('Demo', {
-//        title: 'View Engine Demo'
-//    })
-//})
 
-app.post('/login', function(req, res){
-  
-  // Rendering our web page i.e. Demo.ejs
-  // and passing title variable through it
-  res.render('demo', {
-      title: res.send(email)
-  })
-})
 
 // Navigation
-app.get('/indexapp.html', (req, res) => {
-    res.sendFile(__dirname + '/views/indexapp.html')
+app.get('/indexapp', (req, res) => {
+  res.render('indexapp', { titulo: "JAS - Tienda virtual" })
  })
 
-app.get('/carrito.html', (req, res) => {
-    res.sendFile(__dirname + '/views/carrito.html')
+app.get('/carrito', (req, res) => {
+    res.render("carrito")
  })
 
-app.get('/contraseña.html', (req, res) => {
-  res.sendFile(__dirname + '/views/contraseña.html')
+app.get('/contrasena', (req, res) => {
+  res.render("contrasena")
 })
 
-app.get('/crearcuenta.html', (req, res) => {
-  res.sendFile(__dirname + '/views/crearcuenta.html')
+app.get('/crearcuenta', (req, res) => {
+  res.render("crearcuenta")
 })
 
-app.get('/nosotros.html', (req, res) => {
-  res.sendFile(__dirname + '/views/nosotros.html')
+app.get('/nosotros', (req, res) => {
+  res.render("nosotros")
 })
 
-app.get('/zapatillas.html', (req, res) => {
-  res.sendFile(__dirname + '/views/zapatillas.html')
+app.get('/zapatillas', (req, res) => {
+  res.render("zapatillas")
+})
+
+app.get('/registracion', (req, res) => {
+  res.render("registracion")
 })
 
 

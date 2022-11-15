@@ -22,7 +22,7 @@ const register = async (req, res) => {
     role: "user",
   }).then((user) => {
     
-      res.send("BIENVENIDO " + email + "YA ESTAS REGISTRADO EN JAS ROPA URBANA!");
+      res.render('registracion', { nombre: email });
       //res.status(200).json({ status: 200, msg: "Usuario creado correctamente", user });
     })
     .catch((error) => {
@@ -72,10 +72,7 @@ const logIn = async (req, res) => {
             .json({ msg: "Algo ha fallado update!", error });
         }
         return res
-        //.send("<html> <head ><h1> Hola "+ email + "!</h1 > </head> <body><h2>Estás correctamente logueado en JAS Ropa Urbana.</p></h2> </body> </html>")
-        //.render( "indexapp.ejs");          
-        //return res.status(200).json({ user, token });
-        
+        //return res.status(200).json({ user, token });        
         .render('indexapp', { title: email });
         
       } else {
