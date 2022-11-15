@@ -5,6 +5,7 @@ const { promisify } = require("util");
 const { isJwtExpired } = require("jwt-check-expiration");
 const { User } = require("../database/models/index");
 const path = require("path");
+const app = require("../server");
 
 
 //Auth
@@ -32,8 +33,9 @@ const register = async (req, res) => {
 };
 
 const logIn = async (req, res) => {
-  const { email, password } = req.body;
-
+ 
+  const {email, password} = req.body
+  
   //Comprobar email en DB
   User.findOne({
     where: { email: email },
@@ -73,8 +75,8 @@ const logIn = async (req, res) => {
         }
         return res
         //return res.status(200).json({ user, token });        
-        .render('indexapp', { title: email });
-        
+        .render('indexapp', { titulo: email })
+                
       } else {
         //Acceso denegado - Usuario y/o contraseña invalidos
         return res

@@ -17,7 +17,8 @@ app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(json())
-app.use(session( {secret: 'xxx', saveUninitialized: true, resave: true} ));
+
+
 
 
 // Routes
@@ -41,8 +42,9 @@ app.set('view engine', 'ejs')
 
 // Navigation
 app.get('/indexapp', (req, res) => {
-  res.render('indexapp', { titulo: "JAS - Tienda virtual" })
+  res.render('indexapp', { titulo : "JAS - Tienda virtual" })
  })
+
 
 app.get('/carrito', (req, res) => {
     res.render("carrito")
