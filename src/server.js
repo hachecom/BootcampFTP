@@ -4,12 +4,12 @@ const cors = require("cors");
 const { json } = require("body-parser");
 const path = require("path");
 const session = require('express-session');
-const REquest = require("request");
 const app = express();
 
 //Requires to routes
 const authRoute = require("./routes/auth.routes");
 const usersRoute = require("./routes/users.routes");
+const navRoute = require("./routes/nav.routes");
 const { title } = require("process");
 
 //Middleware
@@ -19,11 +19,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(json())
 
 
-
-
 // Routes
 app.use("/users", usersRoute);
 app.use("/", authRoute);
+app.use("/", navRoute);
 
 
 
@@ -40,35 +39,7 @@ app.set('view engine', 'ejs')
 
 
 
-// Navigation
-app.get('/indexapp', (req, res) => {
-  res.render('indexapp', { titulo : "JAS - Tienda virtual" })
- })
 
-
-app.get('/carrito', (req, res) => {
-    res.render("carrito")
- })
-
-app.get('/contrasena', (req, res) => {
-  res.render("contrasena")
-})
-
-app.get('/crearcuenta', (req, res) => {
-  res.render("crearcuenta")
-})
-
-app.get('/nosotros', (req, res) => {
-  res.render("nosotros")
-})
-
-app.get('/zapatillas', (req, res) => {
-  res.render("zapatillas")
-})
-
-app.get('/registracion', (req, res) => {
-  res.render("registracion")
-})
 
 
 //Elimina el cache, para evitar errores con Logout
