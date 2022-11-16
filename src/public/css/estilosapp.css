@@ -115,8 +115,16 @@ section{
     height: 100%;
     
   }
-  
-.cardheader {
+ 
+  .cardheader {
     
     height: 100%;
 }
+  
+  .filtrosBotones {
+    border-color: black;
+    flex: auto;
+    margin: 0;
+    padding: 0;
+  }
+
