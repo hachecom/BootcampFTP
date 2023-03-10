@@ -1,3 +1,7 @@
+Bootcamp dictado por Syloper (www.syloper.com) sobre el desarrollo de aplicaciones web. Como trabajo final desarrollamos un MVP de una aplicación web para un e-commerce. 
+
+
+
 ------------
 
 Instalar de forma global el cliente de sequelize
