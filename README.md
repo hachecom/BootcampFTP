@@ -1,6 +1,11 @@
 Bootcamp dictado por Syloper (www.syloper.com) sobre el desarrollo de aplicaciones web. Como trabajo final desarrollamos un MVP de una aplicación web para un e-commerce. 
 
+Entrar al directorio del proyecto
+Instalar express si no lo tienes: npm install express
+Correr npm install para descargar las dependencias especificadas en el package.json
+Ejecutar node app.js
 
+(no olvidar levantar la DB)
 
 ------------
 
